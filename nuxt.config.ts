@@ -1,7 +1,8 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
+import tailwindcss from "@tailwindcss/vite";
+
 export default defineNuxtConfig({
   site: {
-    url: 'https://localhost:3000',
+    // url: 'https://localhost:3000',
     name: 'Hoy Bailaré',
     currentLocale: 'es_AR'
   },
@@ -21,6 +22,12 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     '@nuxtjs/seo'
   ],
+  vite: {
+    plugins: [
+      tailwindcss(),
+    ],
+  },
+  ssr: true,
   seo: {
     meta: {
       description: 'My awesome website',
