@@ -19,6 +19,7 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/eslint',
     '@nuxt/scripts',
+    '@nuxt/ui',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
     '@nuxtjs/seo',
@@ -43,17 +44,6 @@ export default defineNuxtConfig({
       author: 'Manuel Villarinos',
       colorScheme: 'light',
       applicationName: 'hoy-bailare-app',
-
-      // Nuxt SEO Utils already sets the below tags for you
-      ogSiteName: 'Hoy Bailaré',
-      ogLocale: 'es_AR',
-      ogType: 'website',
-      ogUrl: 'https://localhost:3000/',
-      ogTitle: 'Hoy Bailaré',
-
-      // Other Nuxt SEO modules handles these
-      ogImage: 'https://example.com/my-og-image.png',
-      robots: 'index, follow',
     },
   },
   tailwindcss: {

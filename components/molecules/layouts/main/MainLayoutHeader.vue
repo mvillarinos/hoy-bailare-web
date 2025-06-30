@@ -9,8 +9,6 @@ const { isMobile } = useTailwindSize()
       sizes="52px"
       class="rounded-lg"
     />
-    <div v-if="isMobile">
-      menu
-    </div>
+    <UDropdown v-if="isMobile" />
   </nav>
 </template>
