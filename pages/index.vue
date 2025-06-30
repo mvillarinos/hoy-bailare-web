@@ -2,9 +2,9 @@
 </script>
 
 <template>
-    <div>
-        <span>
-            Hoy bailaré
-        </span>
-    </div>
+  <div>
+    <span>
+      Hoy bailaré
+    </span>
+  </div>
 </template>

@@ -1,16 +1,17 @@
-import tailwindcss from "@tailwindcss/vite";
+import tailwindcss from '@tailwindcss/vite'
+import { defineNuxtConfig } from 'nuxt/config'
 
 export default defineNuxtConfig({
   site: {
     // url: 'https://localhost:3000',
     name: 'Hoy Bailaré',
-    currentLocale: 'es_AR'
+    currentLocale: 'es_AR',
   },
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
   components: [{
     path: '~/components',
-    pathPrefix: false
+    pathPrefix: false,
   }],
   modules: [
     '@nuxt/content',
@@ -20,7 +21,8 @@ export default defineNuxtConfig({
     '@nuxt/scripts',
     '@nuxtjs/tailwindcss',
     '@vueuse/nuxt',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    '@nuxt/image',
   ],
   vite: {
     plugins: [
@@ -28,6 +30,9 @@ export default defineNuxtConfig({
     ],
   },
   ssr: true,
+  image: {
+    dir: 'assets/img',
+  },
   seo: {
     meta: {
       description: 'My awesome website',
@@ -49,6 +54,9 @@ export default defineNuxtConfig({
       // Other Nuxt SEO modules handles these
       ogImage: 'https://example.com/my-og-image.png',
       robots: 'index, follow',
-    }
-  }
+    },
+  },
+  tailwindcss: {
+    exposeConfig: false,
+  },
 })
