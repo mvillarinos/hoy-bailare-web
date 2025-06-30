@@ -1,13 +1,16 @@
-<template>
-    <div class="main-header__container text-3xl font-bold underline">
-    header
-    </div>
-</template>
+<script lang="ts" setup>
+const { isMobile } = useTailwindSize()
+</script>
 
-<style scoped>
-.main-header__container {
-    height: 72px;
-    display: flex;
-    flex-direction: column;
-}
-</style>
+<template>
+  <nav class="relative flex justify-between items-center top-0 h-18 px-4 bg-primary">
+    <NuxtImg
+      src="/logo.jpg"
+      sizes="52px"
+      class="rounded-lg"
+    />
+    <div v-if="isMobile">
+      menu
+    </div>
+  </nav>
+</template>
