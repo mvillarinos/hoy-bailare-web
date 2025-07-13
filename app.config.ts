@@ -7,7 +7,7 @@ export default defineAppConfig({
       info: '--color-accent',
       warning: 'yellow',
       error: 'red',
-      neutral: 'zinc',
+      neutral: '--color-neutral-200',
     },
   },
 })
